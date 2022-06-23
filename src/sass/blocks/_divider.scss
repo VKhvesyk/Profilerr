@@ -1,0 +1,19 @@
+.divider {
+    display: block;
+    height: 1px;
+    background-color: $color-grey;
+    &_header {
+        width: 100vw;
+        position: relative;
+        z-index: 10;
+    }
+    &_short {
+        margin-top: 6px;
+        width: 100%;
+        z-index: unset;
+    }
+    &_vertical {
+        width: 1px;
+        height: 36px;
+    }
+}
