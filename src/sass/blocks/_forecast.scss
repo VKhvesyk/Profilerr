@@ -4,9 +4,13 @@
         list-style-type: none;
         &__item {
             display: none;
-            img {
-                width: 12px;
-                height: 12px;
+            picture {
+                margin-right: 5px;
+                img {
+                    width: 12px;
+                    height: 12px;
+                    object-fit: contain;
+                }
             }
             a {
                 font-size: 16px;
@@ -49,10 +53,12 @@
         &__share {
             width: 25px;
             height: 28px;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
+            picture {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
             }
         }
     }
@@ -166,7 +172,6 @@
         }
     }
     &-event {
-        margin-bottom: 20px;
         margin-top: 20px;
         display: flex;
         flex-wrap: nowrap;
@@ -174,7 +179,6 @@
         white-space: nowrap;
         border-top: 1px solid $color-grey;
         border-bottom: 1px solid $color-grey;
-        // position: relative;
         &__name, &__prize, &__participants {
             display: flex;
             flex-direction: column;

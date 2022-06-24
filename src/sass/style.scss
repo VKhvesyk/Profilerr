@@ -1,5 +1,6 @@
 
 @import 'base/variables';
+@import 'base/animation';
 
 @font-face {
     font-family: 'Formular';
@@ -35,9 +36,18 @@
     padding: 0px 20px;
 }
 
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
 
 @import 'blocks/header';
 @import 'blocks/divider';
 @import 'blocks/forecast';
+@import 'blocks/betting';
 
 // @import 'blocks/media';

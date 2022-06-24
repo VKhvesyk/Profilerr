@@ -14,7 +14,7 @@
         <div class="container">
             <div class="header__wrapper">
 
-                <div class="header-menu__btn">
+                <div class="header-menu__button">
                     <span></span>
                     <span></span>
                 </div>
@@ -63,7 +63,10 @@
 
                 <div class="header-search">
                     <div class="header-search__icon">
-                        <img src="icons/search.svg" alt="Поиск">
+                        <picture>
+                            <source srcset="icons/search.svg" type="image/svg+xml">
+                            <img src="icons/search.svg" alt="Поиск">
+                        </picture>
                     </div>
                     <input type="text" class="header-search__input">
                 </div>
@@ -82,19 +85,31 @@
         <div class="container">
             <ul class="forecast-crumbs">
                 <li class="forecast-crumbs__item">
-                    <img src="icons/left-arrow.svg" alt="arrow icon">
+                    <picture>
+                        <source srcset="icons/left-arrow.svg" type="image/svg+xml">
+                        <img src="icons/left-arrow.svg" alt="arrow icon">
+                    </picture>
                     <a href="">Home</a>
                 </li>
                 <li class="forecast-crumbs__item">
-                    <img src="icons/left-arrow.svg" alt="arrow icon">
+                    <picture>
+                        <source srcset="icons/left-arrow.svg" type="image/svg+xml">
+                        <img src="icons/left-arrow.svg" alt="arrow icon">
+                    </picture>
                     <a href="">Прогнозы на киберспорт</a>
                 </li>
                 <li class="forecast-crumbs__item">
-                    <img src="icons/left-arrow.svg" alt="arrow icon">
+                    <picture>
+                        <source srcset="icons/left-arrow.svg" type="image/svg+xml">
+                        <img src="icons/left-arrow.svg" alt="arrow icon">
+                    </picture>
                     <a href="">Прогнозы на матчи CS:GO</a>
                 </li>
                 <li class="forecast-crumbs__item">
-                    <img src="icons/left-arrow.svg" alt="arrow icon">
+                    <picture>
+                        <source srcset="icons/left-arrow.svg" type="image/svg+xml">
+                        <img src="icons/left-arrow.svg" alt="arrow icon">
+                    </picture>
                     <span>Прогноз матча Heroic против Natus Vincere 27 ноября</span>
                 </li>
             </ul>
@@ -109,7 +124,10 @@
                 <div class="forecast-header__date">
                     <time datetime="2021-11-27">Nov 27, 2021</time>
                     <div class="forecast-header__share">
-                        <img src="icons/share.svg" alt="Share">
+                        <picture>
+                            <source srcset="icons/share.svg" type="image/svg+xml">
+                            <img src="icons/share.svg" alt="Share">
+                        </picture>
                     </div>
                 </div>
                 <div class="divider divider_short"></div>
@@ -193,6 +211,314 @@
             </ul>
         </div>
     </section>
+
+    <section class="betting">
+        <div class="container">
+            <h3 class="betting__title">
+                Коэффициенты <br>
+                 и ставки
+            </h3>
+            <div class="betting-tabs">
+                
+                    <div class="betting-tabs__buttons">
+                        <div class="betting-tabs__button betting-tabs__button_active">Prematch</div>
+                        <div class="betting-tabs__button">Live</div>
+                    </div>
+
+                    <div class="betting-tabs__wrapper">
+
+                        <div class="betting-tab">
+                            <div class="betting-tab__title">
+                                <h3>Heroic</h3>
+                                <h3>Natus Vincere</h3>
+                            </div>
+                            
+                            <div class="betting-tab__items">
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_mark">
+                                                6.99
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/pari-match.svg" type="image/svg+xml">
+                                                    <img src="icons/betting-companies/pari-match.svg" alt="Parimatch">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient">
+                                                1.8
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Приветственный бонус 200%</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient">
+                                                4.4
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/unibet.png">
+                                                    <img src="icons/betting-companies/unibet.png" alt="Unibet">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient">
+                                                2.8
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Winner Map 1</p>
+                                            <p>Страховка ставки <span>BO4J</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient">
+                                                3.2
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/ggbet.svg" type="image/svg+xml">
+                                                    <img src="icons/betting-companies/ggbet.svg" alt="GGBET">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_mark">
+                                                2.95
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Winner Map 2</p>
+                                            <p>Страховка ставки <span>BO4J</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient">
+                                                3.97
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/betway.png">
+                                                    <img src="icons/betting-companies/betway.png" alt="Betway">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient">
+                                                1.76
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Best of 3</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header betting-tab__header_short_item">
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                3.82
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/betsson.png">
+                                                    <img src="icons/betting-companies/betsson.png" alt="Betsson">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                1.79
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header betting-tab__header_short_item">
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                4.88
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/loot-bet.png">
+                                                    <img src="icons/betting-companies/loot-bet.png" alt="Lootbet">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                1.79
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="betting-tab__load-more">ПОКАЗАТЬ ЕЩЕ</button>
+                        </div>
+
+                        <!-- ///////////////////////////////// -->
+
+                        <div class="betting-tab">
+                            <div class="betting-tab__title">
+                                <h3>Heroic</h3>
+                                <h3>Natus Vincere</h3>
+                            </div>
+                            
+                            <div class="betting-tab__items">
+
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient">
+                                                3.2
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/ggbet.svg" type="image/svg+xml">
+                                                    <img src="icons/betting-companies/ggbet.svg" alt="GGBET">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_mark">
+                                                2.95
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Winner Map 2</p>
+                                            <p>Страховка ставки <span>BO4J</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header betting-tab__header_short_item">
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                4.88
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/loot-bet.png">
+                                                    <img src="icons/betting-companies/loot-bet.png" alt="Lootbet">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                1.79
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient">
+                                                4.4
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/unibet.png">
+                                                    <img src="icons/betting-companies/unibet.png" alt="Unibet">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient">
+                                                2.8
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Winner Map 1</p>
+                                            <p>Страховка ставки <span>BO4J</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_mark">
+                                                6.99
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/pari-match.svg" type="image/svg+xml">
+                                                    <img src="icons/betting-companies/pari-match.svg" alt="Parimatch">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient">
+                                                1.8
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Приветственный бонус 200%</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header">
+                                            <div class="betting-tab__coefficient">
+                                                3.97
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/betway.png">
+                                                    <img src="icons/betting-companies/betway.png" alt="Betway">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient">
+                                                1.76
+                                            </div>
+                                        </div>
+                                        <div class="betting-tab__descr">
+                                            <p>Best of 3</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="betting-tab__item">
+                                    <div class="betting-tab__content">
+                                        <div class="betting-tab__header betting-tab__header_short_item">
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                3.82
+                                            </div>
+                                            <div class="betting-tab__image">
+                                                <picture>
+                                                    <source srcset="icons/betting-companies/betsson.png">
+                                                    <img src="icons/betting-companies/betsson.png" alt="Betsson">
+                                                </picture>
+                                            </div>
+                                            <div class="betting-tab__coefficient betting-tab__coefficient_short_item">
+                                                1.79
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <button class="betting-tab__load-more">ПОКАЗАТЬ ЕЩЕ</button>
+                        </div>
+                        
+                        
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
 
     <div class="header__overlay"></div>
 

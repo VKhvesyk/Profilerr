@@ -1,5 +1,5 @@
 "use strict"
-const menuBtn = document.querySelector('.header-menu__btn');
+const menuBtn = document.querySelector('.header-menu__button');
 const menu = document.querySelector('.header-menu__wrapper');
 const overflow = document.querySelector('.header__overlay');
 
@@ -13,7 +13,7 @@ menuBtn.addEventListener('click', function(event) {
 
 function toggleMenu() {
     
-    menuBtn.classList.toggle('header-menu__btn_active');
+    menuBtn.classList.toggle('header-menu__button_active');
     overflow.classList.toggle('header__overlay_active');
     menu.classList.toggle('header-menu__wrapper_active');
 };
@@ -45,3 +45,43 @@ shareButton.addEventListener("click", async () => {
     alert('К сожалению, ваше устройство не поддерживается');
   }
 });
+
+
+// Tabs
+
+let tabs = document.querySelectorAll('.betting-tabs__button'),
+		tabsContent = document.querySelectorAll('.betting-tab'),
+		tabsParent = document.querySelector('.betting-tabs__buttons');
+
+  tabsParent.addEventListener('click', function(event) {
+    const target = event.target;
+    if(target && target.classList.contains('betting-tabs__button')) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+    }
+  });
+
+	function hideTabContent() {
+        
+        tabsContent.forEach(item => {
+            item.classList.add('betting-tab_hide');
+            item.classList.remove('betting-tab_show', 'betting-tab_fade');
+        });
+
+        tabs.forEach(item => {
+            item.classList.remove('betting-tabs__button_active');
+        });
+	}
+
+	function showTabContent(i) {
+        tabsContent[i].classList.add('betting-tab_show', 'betting-tab_fade');
+        tabsContent[i].classList.remove('betting-tab_hide');
+        tabs[i].classList.add('betting-tabs__button_active');
+    }
+    
+    hideTabContent();
+    showTabContent(0);

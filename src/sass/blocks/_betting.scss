@@ -1,0 +1,126 @@
+.betting {
+    margin-top: 20px;
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &-tabs {
+        margin-top: 10px;
+        &__buttons {
+            display: flex;
+            justify-content: flex-start;
+        }
+        &__button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            color: $color-black;
+            border: 2px solid $color-black;
+            border-radius: 22px;
+            background-color: $color-white;
+            &_active {
+                color: $color-white;
+                background-color: $color-black;
+            }
+        }
+    }
+    &-tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__item {
+            margin-bottom: 13px;
+            border-top: 1px solid $color-grey;
+            &:last-child {
+                margin-bottom: 0px;
+                padding-bottom: 8px;
+                border-bottom: 1px solid $color-grey;
+            }
+        }
+        &__title {
+            margin: 20px 0px 10px 0px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__header {
+            padding-top: 18px;
+            display: grid;
+            grid-template-columns: 60px 160px 60px;
+            grid-template-rows: auto auto;
+            justify-items: center;
+            &_short_item {
+                align-items: center;
+            }
+        }
+        &__coefficient {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            &_mark {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 40px;
+                font-weight: 700;
+                color: $color-white;
+                background-color: $color-black;
+                margin-top: 0px;
+            }
+            &_short_item {
+                margin-top: 0px;
+            }
+        }
+        &__descr {
+            margin-top: 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 400;
+            span {
+                font-weight: 700;
+            }
+        }
+        &__image {
+            width: 120px;
+            picture {
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        &__load-more {
+            margin-top: 20px;
+            width: 250px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $color-white;
+            border: 1px solid $color-black;
+            border-radius: 20px;
+        }
+        &_show {
+            display: flex;
+        }
+        &_hide {
+            display: none;
+        }
+        &_fade {
+            animation-name: fade;
+            animation-duration: 0.8s;
+          }
+    }
+}
