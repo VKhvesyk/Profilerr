@@ -1,0 +1,148 @@
+.handicap {
+    margin-top: 40px;
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &__wrapper {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-column-gap: 20px;
+        overflow-x: auto;
+    }
+    &__team {
+        width: fit-content;
+        &-header {
+            padding-bottom: 11px;
+            display: grid;
+            grid-template-columns: 235px 150px;
+            grid-template-rows: auto;
+            border-bottom: 2px solid $color-grey;
+            width: fit-content;
+            align-items: center;
+        }
+        &-name {
+            display: flex;
+            align-items: center;
+            p {
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+        &-logo {
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 1px solid $color-grey;
+            border-radius: 100%;
+            picture {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        &-period {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        &-content {
+            list-style-type: none;
+        }
+        &-score {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        &-percent {
+            justify-self: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &-item {
+            display: grid;
+            grid-template-columns: 235px 150px;
+            grid-template-rows: 60px;
+            align-items: center;
+            border-bottom: 1px solid $color-grey;
+        }
+        &-statistics {
+            padding: 20px 15px;
+            margin-top: 18px;
+            border: 1px solid $color-grey;
+            &-win, &-lose {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                span {
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+            &-win {
+                margin-bottom: 20px;
+            }
+            &-lose {
+                margin-top: 20px;
+            }
+        }
+        &-maps {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 385px;
+            grid-template-rows: 90px 90px 90px;
+            grid-row-gap: 20px;
+            list-style-type: none;
+        }
+        &-map {
+            &-wrapper {
+                padding: 22px 20px;
+                display: grid;
+                grid-template-columns: 165px 110px 110px;
+                color: $color-white;
+                backdrop-filter: brightness(60%);
+            }
+            &:first-child {
+                background-image: url(../img/maps/dust-2.jpg);
+            }
+            &:nth-child(2) {
+                background-image: url(../img/maps/overpass.jpg);
+            }
+            &:last-child {
+                background-image: url(../img/maps/inferno.jpg);
+            }
+            &-name {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            &-wr {
+                font-size: 18px;
+                font-weight: 400;
+            }
+            &-coefficient {
+                justify-self: center;
+                span {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
