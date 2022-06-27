@@ -31,7 +31,7 @@
 }
 
 .container {
-    max-width: 320px;
+    width: 320px;
     margin: 0 auto;
     padding: 0px 20px;
 }
@@ -47,10 +47,13 @@
 
 @import 'blocks/header';
 @import 'blocks/divider';
+@import 'blocks/buttons';
 @import 'blocks/forecast';
 @import 'blocks/betting';
 @import 'blocks/analysis';
 @import 'blocks/face-to-face';
 @import 'blocks/handicap';
+@import 'blocks/another-forecasts';
+@import 'blocks/news';
 
 // @import 'blocks/media';

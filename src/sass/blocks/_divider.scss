@@ -11,4 +11,10 @@
         margin-top: 6px;
         width: 100%;
     }
+    &_dark {
+        background-color: $color-dark-grey;
+    }
+    &_solid {
+        height: 2px;
+    }
 }

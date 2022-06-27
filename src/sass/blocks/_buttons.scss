@@ -1,0 +1,14 @@
+.button {
+    margin-top: 20px;
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    &_load_more {
+        background-color: $color-white;
+        border: 1px solid $color-black;
+        border-radius: 20px;
+    }
+}

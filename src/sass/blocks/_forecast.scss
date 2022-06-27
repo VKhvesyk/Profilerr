@@ -68,26 +68,66 @@
         grid-template-columns: 60px 160px 60px;
         grid-template-rows: 46px 140px 40px;
         grid-row-gap: 30px;
+        &_card {
+            padding-top: unset;
+            grid-template-columns: 74px 130px 74px;
+            grid-template-rows: 180px 90px 112px;
+            grid-row-gap: unset;
+            border: 1px solid $color-grey;
+        }
         &__header {
             grid-row: 1 / 2;
             grid-column: 1 / 4;
             justify-self: center;
+            &_card {
+                grid-row: 2 / 3;
+                justify-self: unset;
+                padding: 20px 20px;
+            }
         }
         &__title {
             font-size: 18px;
             font-weight: 700;
             text-align: center;
+            &_card {
+                text-align: left;
+            }
         }
         &__date {
             font-size: 16px;
             font-weight: 400;
             text-align: center;
         }
+        &__betting-company {
+            &_card {
+                width: 80px;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
         &__scoreboard {
             grid-row: 2 / 3;
             grid-column: 1 / 4;
             display: grid;
             grid-template-columns: 25% 50% 25%;
+            &_card {
+                grid-row: 1 / 2;
+                color: $color-white;
+                padding: 0px 20px;
+            }
+            &_bg {
+                &_purple {
+                    background-color: $color-card-purple;
+                }
+                &_orange {
+                    background-color: $color-card-orange;
+                }
+                &_red {
+                    background-color: $color-card-red;
+                }
+            }
         }
         &__footer {
             grid-row: 3 / 4;
@@ -95,7 +135,10 @@
             font-size: 18px;
             font-weight: 700;
             text-align: center;
-
+            &_card {
+                padding: 0px 20px 20px 20px;
+                align-self: flex-end;
+            }
             span {
                 display: block;
                 height: 4px;
@@ -110,6 +153,31 @@
                     background-color: $color-green;
                 }
             }
+            &-author {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 48px;
+                &-photo {
+                    margin-right: 10px;
+                    width: 48px;
+                    height: 48px;
+                    picture {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                &-name {
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
         }
         &__rate-ratio {
             display: flex;
@@ -120,6 +188,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            &_card {
+                justify-content: center;
+            }
             &-logo {
                 display: flex;
                 justify-content: center;
@@ -133,6 +204,9 @@
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
+                }
+                &_card {
+                    background-color: $color-white;
                 }
                 &_winner {
                     &::after {
@@ -169,6 +243,10 @@
                 height: 32px;
                 background-color: $color-black;
                 color: $color-white;
+                &_card {
+                    color: $color-black;
+                    background-color: $color-white;
+                }
             }
         }
         &__time {
@@ -178,13 +256,17 @@
             align-items: center;
             padding: 20px 0px 10px 0px;
             text-align: center;
+            &_card {
+                justify-content: space-evenly;
+                padding-bottom: 18px;
+            }
             time {
                 &:first-child {
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 400;
                 }
                 &:last-child {
-                    font-size: 30px;
+                    font-size: 24px;
                     font-weight: 700;
                 }
             }
