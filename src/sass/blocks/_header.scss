@@ -84,13 +84,18 @@
                 object-fit: contain;
             }
         }
-        &_hide {
+        &_fade {
             transform: translateY(-150%);
+        }
+        &_hide {
+            display: none;
         }
     }
     &-search {
         display: flex;
+        position: relative;
         &__icon {
+            // display: none;
             width: 24px;
             height: 24px;
             img {
@@ -101,7 +106,35 @@
         }
         &__input {
             display: none;
+            // width: 24px;
+            // height: 24px;
+            // border: 4px solid $color-black;
+            // border-radius: 100%;
+            // transition: 0.2s all;
         }
+        // &::before {
+        //     content: '';
+        //     display: block;
+        //     height: 10px;
+        //     width: 4px;
+        //     background-color: $color-black;
+        //     position: absolute;
+        //     top: 18px;
+        //     right: -2px;
+        //     transform: rotate(-49deg);
+        // }
+        // &_active {
+        //     input {
+        //         width: 100%;
+        //         height: 40px;
+        //         border: 4px solid #000;
+        //         border-radius: 20px;
+        //         margin-left: 20px;
+        //     }
+        //     &::before {
+        //         display: none;
+        //     }
+        // }
     }
     &-change-lang {
         display: none;
