@@ -11,4 +11,35 @@
         border: 1px solid $color-black;
         border-radius: 20px;
     }
+    &_subscribe {
+        padding: 0px 20px;
+        width: 280px;
+        height: 60px;
+        font-size: 24px;
+        font-weight: 700;
+        color: $color-white;
+        background-color: $color-black;
+        text-transform: uppercase;
+        border: 1px solid rgba(255,255,255, 0.35%);
+        transition: 0.5s all;
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+    &_search {
+        width: 90px;
+        font-size: 16px;
+        color: $color-white;
+        border-radius: 20px;
+        background-color: $color-green;
+        border: none;
+        text-transform: capitalize;
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        transition: 0.3s all;
+        &:active {
+            transform: scale(0.9);
+        }
+    }
 }

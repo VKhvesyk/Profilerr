@@ -1,9 +1,5 @@
 .handicap {
     margin-top: 40px;
-    &__title {
-        font-size: 30px;
-        font-weight: 700;
-    }
     &__wrapper {
         margin-top: 20px;
         display: grid;
@@ -26,10 +22,6 @@
         &-name {
             display: flex;
             align-items: center;
-            p {
-                font-size: 24px;
-                font-weight: 700;
-            }
         }
         &-logo {
             margin-right: 10px;
@@ -205,10 +197,6 @@
                 display: flex;
                 align-items: center;
                 justify-self: flex-start;
-                p {
-                    font-size: 18px;
-                    font-weight: 700;
-                }
             }
             &-logo {
                 margin-right: 10px;
@@ -234,10 +222,6 @@
     }
     &__about {
         margin-top: 30px;
-        &-title {
-            font-size: 30px;
-            font-weight: 700;
-        }
         &-text {
             margin-top: 20px;
             font-size: 18px;

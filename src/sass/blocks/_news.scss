@@ -1,14 +1,8 @@
 .news {
-    margin-bottom: 100px;
     margin-top: 40px;
     padding: 20px 0px;
     background-color: $color-black;
     // overflow: hidden;
-    &__title {
-        font-size: 30px;
-        font-weight: 700;
-        color: $color-white;
-    }
     &-slider {
         &__buttons {
             display: none;
@@ -64,8 +58,6 @@
         &__title {
             margin-top: 22px;
             padding: 0px 20px;
-            font-size: 20px;
-            font-weight: 700;
             max-height: 130px;
             overflow: hidden;
             a {

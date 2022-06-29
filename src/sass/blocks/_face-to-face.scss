@@ -7,8 +7,6 @@
     }
     &__title {
         margin-bottom: 20px;
-        font-size: 30px;
-        font-weight: 700;
     }
     &__team {
         margin-right: 25px;
@@ -27,10 +25,6 @@
         &-name {
             display: flex;
             align-items: center;
-            p {
-                font-size: 22px;
-                font-weight: 700;
-            }
         }
         &-logo {
             margin-right: 10px;
@@ -149,6 +143,42 @@
         &-nickname {
             font-size: 16px;
             font-weight: 700;
+            position: relative;
+            &_flag {
+                &_dk, &_ua, &_ru, &_by {
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        height: 15px;
+                        width: 14px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        top: 2px;
+                        right: -18px;
+                    }
+                }
+                &_dk {
+                    &:after {
+                        background-image: url(../icons/flags/dk.png);
+                    }
+                }
+                &_ua {
+                    &::after {
+                        background-image: url(../icons/flags/ua.png);
+                    }
+                }
+                &_ru {
+                    &::after {
+                        background-image: url(../icons/flags/ru.png);
+                    }
+                }
+                &_by {
+                    &::after {
+                        background-image: url(../icons/flags/by.png);
+                    }
+                }
+            } 
         }
         &-name {
             font-size: 16px;

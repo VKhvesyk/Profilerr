@@ -1,0 +1,23 @@
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    &_color {
+        &_white {
+            color: $color-white;
+        }
+    }
+    &_fs {
+        &_24 {
+            font-size: 24px;
+        }
+        &_22 {
+            font-size: 22px;
+        }
+        &_20 {
+            font-size: 20px;
+        }
+        &_18 {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.footer {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            color: $color-black;
+            text-transform: uppercase;
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+    &__links {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 20px;
+        &-link {
+            font-size: 18;
+            font-weight: 400;
+            text-decoration: none;
+            color: $color-black;
+        }
+    }
+    &__rights {
+        margin-top: 80px;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 40%;
+    }
+    &__switch-lang {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &-icon {
+            margin-right: 5px;
+        }
+        select {
+            appearance: none;
+            border: none;
+            width: 200px;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: transparent;
+            z-index: 15;
+            &:active {
+                border: none;
+                outline: none;
+            }
+        }
+        &::after {
+            content: 'Browser Languages';
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            position: absolute;
+            top: 3px;
+            left: 67px;
+            z-index: 5;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 13px;
+            background-color: $color-black;
+            position: absolute;
+            left: 62px;
+            top: 7px;
+        }
+    }
+    &__policy {
+        margin-top: 20px;
+        display: flex;
+        a {
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: $color-black;
+            text-decoration: none;
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+    }
+    &__copyright {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        a {
+            text-decoration: none;
+            color: $color-black;
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+}

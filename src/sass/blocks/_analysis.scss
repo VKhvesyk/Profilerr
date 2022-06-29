@@ -1,9 +1,5 @@
 .analysis {
     margin-top: 30px;
-    &__title {
-        font-size: 30px;
-        font-weight: 700;
-    }
     &-team {
         margin-top: 42px;
         &__name {
@@ -12,11 +8,7 @@
             justify-content: flex-start;
             align-items: center;
             width: 100%;
-            height: 32px;
-            p {
-                font-size: 22px;
-                font-weight: 700;
-            }   
+            height: 32px;  
         }
         &__logo {
             margin-right: 10px;
@@ -40,8 +32,6 @@
         &__advantage, &__disadvantage {
             &-header {
                 margin: 22px 0px;
-                font-size: 22px;
-                font-weight: 700;
             }
             &-content {
                 list-style-type: none;

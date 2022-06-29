@@ -36,18 +36,11 @@
     padding: 0px 20px;
 }
 
-.show {
-    display: block !important;
-}
-
-.hide {
-    display: none !important;
-}
-
 
 @import 'blocks/header';
 @import 'blocks/divider';
 @import 'blocks/buttons';
+@import 'blocks/title';
 @import 'blocks/forecast';
 @import 'blocks/betting';
 @import 'blocks/analysis';
@@ -55,5 +48,7 @@
 @import 'blocks/handicap';
 @import 'blocks/another-forecasts';
 @import 'blocks/news';
+@import 'blocks/subscribe';
+@import 'blocks/footer';
 
 // @import 'blocks/media';
