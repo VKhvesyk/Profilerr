@@ -2,6 +2,9 @@
     margin-top: 30px;
     &-team {
         margin-top: 42px;
+        &:nth-child(2) {
+            margin-top: 20px;
+        }
         &__name {
             margin-bottom: 11px;
             display: flex;

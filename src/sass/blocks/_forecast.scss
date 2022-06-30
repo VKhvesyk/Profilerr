@@ -63,7 +63,7 @@
     &-info {
         padding-top: 20px;
         display: grid;
-        grid-template-columns: 60px 160px 60px;
+        grid-template-columns: 25% 50% 25%;
         grid-template-rows: 46px 140px 40px;
         grid-row-gap: 30px;
         &_card {
@@ -83,6 +83,12 @@
                 padding: 20px 20px;
             }
         }
+        &__time {
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+        }
         &__title {
             text-align: center;
             &_card {
@@ -95,8 +101,11 @@
             text-align: center;
         }
         &__betting-company {
+            grid-row: 2/3;
+            align-self: flex-end;
             &_card {
                 width: 80px;
+                justify-self: center;
                 img {
                     width: 100%;
                     object-fit: contain;
@@ -122,6 +131,26 @@
                 }
                 &_red {
                     background-color: $color-card-red;
+                }
+            }
+        }
+        &__winner {
+            grid-row: 3/4;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            span {
+                display: block;
+                height: 4px;
+                border-radius: 4px;
+                &:first-child {
+                    width: 20px;
+                    background-color: $color-red;
+                    margin-right: 10px;
+                }
+                &:last-child {
+                    width: 180px;
+                    background-color: $color-green;
                 }
             }
         }
@@ -187,6 +216,33 @@
             &_card {
                 justify-content: center;
             }
+            &-country {
+                display: none;
+                margin-top: 5px;
+                font-size: 16px;
+                opacity: 40%;
+            }
+            &-betting {
+                display: none;
+                margin-top: 5px;
+                &-item {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    margin-right: 10px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    &_color {
+                        &_red {
+                            background-color: $color-red;
+                        }
+                        &_green {
+                            background-color: $color-green;
+                        }
+                    }
+                }
+            }
             &-logo {
                 display: flex;
                 justify-content: center;
@@ -196,10 +252,14 @@
                 border: 1px solid $color-light-gray;
                 border-radius: 100%;
                 position: relative;
-                img {
+                picture {
                     width: 100%;
                     height: 100%;
-                    object-fit: contain;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
                 }
                 &_card {
                     background-color: $color-white;
@@ -246,15 +306,19 @@
             }
         }
         &__time {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
             padding: 20px 0px 10px 0px;
             text-align: center;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 50px 40px 30px;
+            grid-row-gap: 30px;
             &_card {
                 justify-content: space-evenly;
                 padding-bottom: 18px;
+                grid-template-rows: 50px 40px;
+            }
+            &-wrapper {
+                grid-row: 1/2;
             }
             time {
                 &:first-child {
@@ -271,7 +335,9 @@
     &-event {
         margin-top: 20px;
         display: flex;
+        align-items: center;
         flex-wrap: nowrap;
+        height: 60px;
         overflow-x: auto;
         white-space: nowrap;
         border-top: 1px solid $color-grey;
@@ -305,7 +371,7 @@
                 &::after, &::before {
                     content: '';
                     display: block;
-                    height: 36px;
+                    height: 60%;
                     width: 1px;
                     background-color: $color-grey;
                     position: absolute;

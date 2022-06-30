@@ -1,6 +1,7 @@
 .header {
     &__wrapper {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         height: 60px;
     }
@@ -75,7 +76,6 @@
         }
     }
     &-logo {
-        margin: 0px 28px;
         transition: 0.3s all;
         picture {
             img {
@@ -95,7 +95,6 @@
         display: flex;
         position: relative;
         &__icon {
-            // display: none;
             width: 24px;
             height: 24px;
             img {

@@ -1,17 +1,217 @@
-@media (min-width: 376px) {
-
+@media (min-width: 375px) {
+    .forecast {
+        &-info {
+            &_card {
+                grid-template-columns: 74px 130px 74px;
+            }
+            &__time {
+                time {
+                    &:first-child {
+                        font-size: 16px;
+                    }
+                    &:last-child {
+                        font-size: 30px;
+                    }
+                }
+                &_card {
+                    time {
+                        &:first-child {
+                            font-size: 14px;
+                        }
+                        &:last-child {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        &-event {
+            height: 84px;
+            li {
+                &:nth-child(2) {
+                    &::after, &::before {
+                        height: 100%;
+                    }
+                    &::before {
+                        left: -18px;
+                    }
+                }
+            }
+        }
+    }
+    .betting {
+        &-tab {
+            &__header {
+                grid-template-columns: 80px 175px 80px;
+            }
+        }
+    }
+    .handicap {
+        &__team {
+            &-header {
+                grid-template-columns: 180px 155px;
+            }
+            &-item {
+                grid-template-columns: 180px 155px;
+            }
+            &-statistics {
+                width: 335px;
+            }
+            &-map {
+                &-wrapper {
+                    grid-template-columns: 115px 100px 100px;
+                }
+            }
+        }
+    }
+    .subscribe {
+        &__button {
+            width: 335px;
+        }
+    }
 }
 
-@media (min-width: 426px) {
-
+@media (min-width: 425px) {
+    .face-to-face {
+        &__team {
+            &-header {
+                grid-template-columns: 234px 105px 45px;
+            }
+            &-footer {
+                grid-template-columns: repeat(4,55px);
+            }
+        }
+        &__player {
+            grid-template-columns: 64px 170px 105px 35px;
+        }
+    }
+    .handicap {
+        &__team {
+            &-header {
+                grid-template-columns: 230px 155px;
+            }
+            &-item {
+                grid-template-columns: 230px 155px;
+            }
+            &-statistics {
+                width: 385px;
+            }
+            &-map {
+                &-wrapper {
+                    grid-template-columns: 135px 110px 110px;
+                }
+            }
+        }
+    }
+    .subscribe {
+        &__button {
+            width: 385px;
+        }
+    }
 }
 
 @media (min-width: 600px) {
-
+    .forecast {
+        &-info {
+            &__team {
+                &-logo {
+                    width: 100px;
+                    height: 100px;
+                    &_card {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+    .betting {
+        &-tab {
+            &__content {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+            &__header {
+                margin-right: 20px;
+            }
+        }
+    }
 }
 
-@media (min-width: 801px) {
-
+@media (min-width: 800px) {
+    .forecast {
+        &-crumbs {
+            display: flex;
+            align-items: center;
+            &__item {
+                margin-right: 10px;
+                picture {
+                    margin-right: 5px;
+                    img {
+                        width: 12px;
+                        height: 12px;
+                        object-fit: contain;
+                        transform: rotateY(180deg);
+                    }
+                }
+                a {
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: $color-black;
+                }
+                &:nth-last-child(-n+2) {
+                    display: block;
+                }
+                &:nth-last-child(2) {
+                    picture {
+                        display: none;
+                    }
+                    opacity: 50%;
+                }
+                &:last-child {
+                    font-weight: 500;
+                }
+            }
+        }
+        &-info {
+            grid-template-rows: 46px 140px 55px;
+            &_card {
+                grid-template-rows: 180px 90px 112px;
+            }
+            &__winner {
+                grid-row: 2/3;
+            }
+            &__betting-company {
+                grid-row: 3/4;
+                &_card {
+                    grid-row: 2/3;
+                }
+            }
+            &__team {
+                &-country {
+                    display: block;
+                }
+                &-betting {
+                    display: flex;
+                }
+            }
+        }
+    }
+    .subscribe {
+        &__form {
+            display: flex;
+            align-items: center;
+        }
+        &__input {
+            margin-right: 15px;
+        }
+    }
+    .button {
+        &_subscribe {
+            margin: 0px;
+        }
+    }
 }
 
 @media (min-width: 1025px) {

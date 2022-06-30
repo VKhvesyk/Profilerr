@@ -19,12 +19,12 @@
                     <span></span>
                 </div>
 
-                <div class="header-logo">
+                <a href="#" class="header-logo">
                     <picture>
                         <source srcset="icons/logo.svg" type="image/svg+xml">
                         <img src="icons/Glogo.svg" alt="Логотип">
                     </picture>
-                </div>
+                </a>
 
                 <nav class="header-menu__wrapper">
                     <ul class="header-menu__main">
@@ -125,7 +125,7 @@
                 <div class="forecast-header__label">
                     CS:GO
                 </div>
-                <h3 class="forecast-header__title title">
+                <h3 class="title forecast-header__title">
                     Матч Heroic — Natus Vincere
                 </h3>
                 <div class="forecast-header__date">
@@ -143,7 +143,7 @@
             <div class="forecast-info">
 
                 <div class="forecast-info__header">
-                    <div class="forecast-info__title">
+                    <div class="title title_fs_18 forecast-info__title">
                         Blast Premier Fall Final <time datetime="2021">2021</time>
                     </div>
                     <div class="forecast-info__date">
@@ -154,17 +154,39 @@
                 <div class="forecast-info__scoreboard">
                     <div class="forecast-info__team">
                         <div class="forecast-info__team-logo">
-                            <img src="icons/teams/small/g2.png" alt="G2 team">
+                            <picture>
+                                <source srcset="icons/teams/small/g2.png">
+                                <img src="icons/teams/small/g2.png" alt="G2 team">
+                            </picture>
                         </div>
                         <h3 class="forecast-info__team-name">G2</h3>
+                        <div class="forecast-info__team-country">
+                            Denmark
+                        </div>
+                        <div class="forecast-info__team-betting">
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_green"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_red"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_red"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_green"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_red"></span>
+                        </div>
                         <div class="forecast-info__team-coefficient">2.8</div>
                     </div>
 
                     <div class="forecast-info__time">
-                        <div>
+                        <div class="forecast-info__time-wrapper">
                             <time datetime="21:00+3:00">21:00 GMT +3</time>
                             <time datetime="16:00">16:00</time>
                         </div>
+
+                        <div class="forecast-info__winner">
+                            <h3 class="forecast-info__result">NaVi победили</h3>
+                            <div class="forecast-info__rate-ratio">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
                         <div class="forecast-info__betting-company">
                             <img src="icons/betting-companies/ggbet.svg" alt="GG.BET company">
                         </div>
@@ -172,20 +194,33 @@
 
                     <div class="forecast-info__team">
                         <div class="forecast-info__team-logo forecast-info__team-logo_winner">
-                            <img src="icons/teams/small/navi.png" alt="NAVI team">
+                            <picture>
+                                <source srcset="icons/teams/small/navi.png">
+                                <img src="icons/teams/small/navi.png" alt="NAVI team">
+                            </picture>
                         </div>
                         <h3 class="forecast-info__team-name">NaVi</h3>
+                        <div class="forecast-info__team-country">
+                            Ukraine
+                        </div>
+                        <div class="forecast-info__team-betting">
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_green"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_green"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_green"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_green"></span>
+                            <span class="forecast-info__team-betting-item forecast-info__team-betting-item_color_red"></span>
+                        </div>
                         <div class="forecast-info__team-coefficient">1.35</div>
                     </div>
                 </div>
 
-                <div class="forecast-info__footer">
+                <!-- <div class="forecast-info__footer">
                     <h3 class="forecast-info__result">NaVi победили</h3>
                     <div class="forecast-info__rate-ratio">
                         <span></span>
                         <span></span>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <ul class="forecast-event">
@@ -423,7 +458,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
                                 <div class="betting-tab__item">
                                     <div class="betting-tab__content">
@@ -510,6 +544,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
                             <button class="button button_load_more">ПОКАЗАТЬ ЕЩЕ</button>
                         </div>
@@ -1576,7 +1611,7 @@
                         </div>
     
                         <div class="forecast-info__time forecast-info__time_card">
-                            <div>
+                            <div class="forecast-info__time-wrapper">
                                 <time datetime="21:00+3:00">21:00 GMT +3</time>
                                 <time datetime="07-30">30 июл</time>
                             </div>
@@ -1626,7 +1661,7 @@
                         </div>
     
                         <div class="forecast-info__time forecast-info__time_card">
-                            <div>
+                            <div class="forecast-info__time-wrapper">
                                 <time datetime="21:00+3:00">21:00 GMT +3</time>
                                 <time datetime="07-30">30 июл</time>
                             </div>
@@ -1676,7 +1711,7 @@
                         </div>
     
                         <div class="forecast-info__time forecast-info__time_card">
-                            <div>
+                            <div class="forecast-info__time-wrapper">
                                 <time datetime="21:00+3:00">21:00 GMT +3</time>
                                 <time datetime="10-10">10 ноя</time>
                             </div>
@@ -1803,8 +1838,12 @@
             <div class="title title_color_white subscribe__title">
                 Esports news & odds weekly
             </div>
-            <input type="text" class="subscribe__input" placeholder="email@domain.com">
-            <button class="button button_subscribe">SUBSCRIBE</button>
+            <form action="" class="subscribe__form">
+                <input type="text" class="subscribe__input" placeholder="email@domain.com">
+                <div class="subscribe__button">
+                    <button class="button button_subscribe">SUBSCRIBE</button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -1829,16 +1868,16 @@
                     Обзоры
                 </a>
                 <a href="" class="footer__links-link">
-                    Интервью
-                </a>
-                <a href="" class="footer__links-link">
-                    Прогнозы
-                </a>
-                <a href="" class="footer__links-link">
                     Новости
                 </a>
                 <a href="" class="footer__links-link">
+                    Интервью
+                </a>
+                <a href="" class="footer__links-link">
                     Советы
+                </a>
+                <a href="" class="footer__links-link">
+                    Прогнозы
                 </a>
             </div>
             <div class="footer__rights">
