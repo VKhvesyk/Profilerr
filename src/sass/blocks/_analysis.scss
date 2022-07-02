@@ -1,7 +1,9 @@
 .analysis {
     margin-top: 30px;
+    &__wrapper {
+        margin-top: 20px;
+    }
     &-team {
-        margin-top: 42px;
         &:nth-child(2) {
             margin-top: 20px;
         }

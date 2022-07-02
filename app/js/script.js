@@ -5,15 +5,28 @@ const menu = document.querySelector('.header-menu__wrapper');
 const overflow = document.querySelector('.header__overlay');
 
 // Menu
+let x = window.matchMedia("(max-width: 799px)");
+console.log(x);
 
-menuBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    toggleMenu();
-});
+function initMenu(x) {
+  if (x.matches) {
+    menuBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      toggleMenu();
+  });
+  }
+};
+
+initMenu(x);
+
+// menuBtn.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     toggleMenu();
+// });
 
 
 function toggleMenu() {
-  
+
     if ((getComputedStyle(document.body).overflow) === 'visible') {
       document.body.style.overflow = 'hidden';
     } else {
@@ -59,7 +72,7 @@ shareButton.addEventListener("click", async () => {
   try {
     await navigator.share({ title: "Матч Heroic — Natus Vincere", url: "" });
   } catch (err) {
-    alert('К сожалению, ваше устройство не поддерживается');
+
   }
 });
 
@@ -106,65 +119,65 @@ let tabs = document.querySelectorAll('.betting-tabs__button'),
 
 
 // Slider
+let width = 270;
 
-let offset = 0;
+const sliderWrapper = document.querySelector('.js-slider__wrapper'),
+      slides = document.querySelectorAll('.js-slider__slide'),
+      touchZone = document.querySelectorAll('.js-slider'),
+      nextBtn = document.querySelector('.js-slider__next'),
+      prevBtn = document.querySelector('.js-slider__prev');
 
-const slides = document.querySelectorAll('.js-slider__slide'),
-      prev = document.querySelector('.js-slider__prev'),
-      next = document.querySelector('.js-slider__next'),
-      slider = document.querySelector('.js-slider'),
-      sliderWrapper = document.querySelector('.js-slider__wrapper'),
-      width = window.getComputedStyle(slider).width,
-      // slideWidth = document.querySelector('.js-slider__slide').clientWidth,
-      touchZone = document.querySelectorAll('.js-slider__slide');
+let position = 0;
 
+function initSlider(x) {
+  if (x.matches) {
+    width = 270;
 
-  sliderWrapper.style.width = (100 * slides.length) + '%';
-  // sliderWrapper.style.width = (slideWidth * (slides.length + 1)) + ((slides.length) * 30) + 'px';
-// sliderWrapper.style.width = 250 * (slides.length) + ((slides.length - 1) * 20) + 'px';
+    touchZone.forEach(slide => {
+      slide.addEventListener('touchstart', handleTouchStart, {passive: true});
+    });
+    touchZone.forEach(slide => {
+      slide.addEventListener('touchmove', handleTouchMove, {passive: true});
+    });
+  } else {
+    width = 320;
 
-  sliderWrapper.style.transition = '0.5s all';
-  slider.style.overflow = 'hidden';
+    nextBtn.addEventListener('click', () => {
+      moveToNextSlide();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+      moveToPrevSlide();
+    });
+  }
+};
 
-  slides.forEach(slide => {
-      slide.style.width = width;
-  });
+initSlider(x);
 
-function moveToPrevSlide() {
-    if (offset == 0) {
-        offset = +width.slice(0, width.length - 2) * (slides.length - 1);
-    } else {
-        offset -= +width.slice(0, width.length - 2);
-    }
-
-    sliderWrapper.style.transform = `translateX(-${offset}px)`;
-}
 
 function moveToNextSlide() {
-    if (offset == (+width.slice(0, width.length - 2) * (slides.length - 1))) {
-        offset = 0;
+  if (position == (+width * (slides.length - 1))) {
+        position = 0;
     } else {
-        offset += +width.slice(0, width.length - 2);
+        position += +width;
     }
 
-    sliderWrapper.style.transform = `translateX(-${offset}px)`;
+
+    sliderWrapper.style.transform = `translateX(-${position}px)`;
 }
 
-// next.addEventListener('click', () => {
+function moveToPrevSlide() {
+  if (position == 0) {
+        position = +width * (slides.length - 1);
+    } else {
+        position -= +width;
+    }
 
-// });
+    sliderWrapper.style.transform = `translateX(-${position}px)`;
+}
 
-// prev.addEventListener('click', () => {
-
-// });
 
 // swipe
-touchZone.forEach(slide => {
-  slide.addEventListener('touchstart', handleTouchStart, {passive: true});
-});
-touchZone.forEach(slide => {
-  slide.addEventListener('touchmove', handleTouchMove, {passive: true});
-});
 
 let x1 = null;
 let y1 = null;

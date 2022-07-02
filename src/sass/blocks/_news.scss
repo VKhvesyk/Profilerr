@@ -3,24 +3,37 @@
     padding: 20px 0px;
     background-color: $color-black;
     // overflow: hidden;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
     &-slider {
+        overflow: hidden;
         &__buttons {
             display: none;
         }
+        &__prev {
+            svg {
+                margin-right: 10px;
+                transform: rotate(180deg);
+            }
+        }
         &__wrapper {
             display: flex;
-            justify-content: space-between;
-            // display: grid;
-            // grid-template-columns: repeat(4, 250px);
-            // grid-column-gap: 30px;
+            transition: 0.7s all;
+            width: fit-content;
         }
     }
     &-card {
+        margin-right: 20px;
         margin-top: 20px;
         width: 250px;
         height: 280px;
         background-color: $color-white;
         position: relative;
+        &:last-child {
+            margin-right: 0px;
+        }
         &__lable {
             margin: 20px 20px;
             display: flex;

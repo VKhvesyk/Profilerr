@@ -332,6 +332,59 @@
             }
         }
     }
+    &-partners {
+        display: none;
+        margin-top: 20px;
+        width: 40%;
+        max-width: 400px;
+        border: 1px solid $color-grey;
+        &__title {
+            margin-top: 20px;
+            text-align: center;
+        }
+        &__content {
+            padding: 0px 10px;
+        }
+        &__partner {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            border-top: 1px solid $color-grey;
+            border-bottom: 1px solid $color-grey;
+            &:first-child {
+                border-top: none;
+            }
+            &-logo {
+                width: 80px;
+                picture {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+            &-bonus {
+                padding-left: 10px;
+                min-width: 70px;
+                font-size: 16px;
+                text-align: left;
+                span {
+                    font-weight: 700;
+                }
+            }
+            &-code {
+                padding: 0px 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                border: 1px dashed $color-grey;
+            }
+        }
+    }
     &-event {
         margin-top: 20px;
         display: flex;

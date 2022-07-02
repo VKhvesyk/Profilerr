@@ -129,6 +129,12 @@
     }
     &-change-lang {
         display: none;
+        font-size: 18px;
+        font-weight: 700;
+        position: absolute;
+        right: 0px;
+        border: none;
+        appearance: none;
     }
     &__overlay {
         position: absolute;

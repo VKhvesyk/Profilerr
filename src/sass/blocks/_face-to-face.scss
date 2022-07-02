@@ -1,12 +1,16 @@
 .face-to-face {
     margin-top: 40px;
     &__wrapper {
-        display: flex;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 40px auto;
+        grid-row-gap: 20px;
         overflow-x: auto;
     }
     &__title {
         margin-bottom: 20px;
+        grid-column: 1/3;
+        grid-row: 1/2;
     }
     &__team {
         margin-right: 25px;

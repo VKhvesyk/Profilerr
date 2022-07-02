@@ -15,9 +15,9 @@
 @font-face {
     font-family: 'Formular';
     src: local('Formular Medium'), local('Formular-Medium'),
-        url('../Formular-Medium.woff2') format('woff2'),
-        url('../Formular-Medium.woff') format('woff'),
-        url('../Formular-Medium.ttf') format('truetype');
+        url('../fonts/Formular-Medium.woff2') format('woff2'),
+        url('../fonts/Formular-Medium.woff') format('woff'),
+        url('../fonts/Formular-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
@@ -41,10 +41,12 @@
 }
 
 .container {
-    // width: 320px;
     width: 100%;
     margin: 0 auto;
     padding: 0px 20px;
+    &_small {
+        width: 100%
+    }
 }
 
 
