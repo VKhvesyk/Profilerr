@@ -68,7 +68,6 @@
         grid-row-gap: 30px;
         &_card {
             padding-top: unset;
-            grid-template-columns: 74px 130px 74px;
             grid-template-rows: 180px 90px 112px;
             grid-row-gap: unset;
             border: 1px solid $color-grey;

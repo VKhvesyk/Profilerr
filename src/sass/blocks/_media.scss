@@ -1,9 +1,6 @@
 @media (min-width: 375px) {
     .forecast {
         &-info {
-            &_card {
-                grid-template-columns: 74px 130px 74px;
-            }
             &__time {
                 time {
                     &:first-child {

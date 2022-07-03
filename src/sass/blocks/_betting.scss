@@ -2,6 +2,11 @@
     margin-top: 20px;
     &-tabs {
         margin-top: 10px;
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &__buttons {
             margin-top: 20px;
             display: flex;
@@ -21,11 +26,19 @@
                 background-color: $color-black;
             }
         }
+        &__footer {
+            display: flex;
+            justify-content: center;
+        }
     }
     &-tab {
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        &:last-child {
+            margin-bottom: 0px;
+        }
         &__item {
             margin-bottom: 13px;
             border-top: 1px solid $color-grey;
