@@ -3,7 +3,7 @@
     &__wrapper {
         margin-top: 20px;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-column-gap: 20px;
         overflow-x: auto;
