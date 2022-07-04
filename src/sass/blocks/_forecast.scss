@@ -95,6 +95,8 @@
             text-align: center;
             &_card {
                 text-align: left;
+                color: $color-black;
+                text-decoration: none;
             }
         }
         &__date {
@@ -203,6 +205,8 @@
                 &-name {
                     font-size: 16px;
                     font-weight: 700;
+                    color: $color-black;
+                    text-decoration: none;
                 }
             }
         }
@@ -289,6 +293,8 @@
                 margin-top: 18px;
                 font-size: 16px;
                 font-weight: 700;
+                color: $color-black;
+                text-decoration: none;
             }
             &-coefficient {
                 display: flex;
