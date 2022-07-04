@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
 "use strict"
+
+// Menu
+
 const menuBtn = document.querySelector('.js-menu__btn'),
       menu = document.querySelector('.js-menu'),
       overflow = document.querySelector('.js-menu__overlay');
 
-// Menu
-let x = window.matchMedia("(max-width: 799px)");
+let mobileMedia = window.matchMedia("(max-width: 1023px)"),
+    desktopMedia = window.matchMedia("(min-width: 1023px)")
 
-function initMenu(x) {
-  if (x.matches) {
+function initMenu(mediaRule) {
+  if (mediaRule.matches) {
     menuBtn.addEventListener('click', function(event) {
       event.preventDefault();
       toggleMenu();
@@ -16,7 +19,7 @@ function initMenu(x) {
   }
 }
 
-initMenu(x);
+initMenu(mobileMedia);
 
 
 function toggleMenu() {
@@ -28,7 +31,7 @@ function toggleMenu() {
     }
 
     menuBtn.classList.toggle('header-menu__button_active');
-    overflow.classList.toggle('header__overlay_active');
+    overflow.classList.toggle('overlay_active');
     menu.classList.toggle('header-menu__wrapper_active');
 }
 
@@ -94,7 +97,7 @@ const tabsButtonsWrapper = document.querySelector('.betting-tabs__buttons'),
         
         tabsContent.forEach(item => {
             item.classList.add('betting-tab_hide');
-            item.classList.remove('betting-tab_show', 'betting-tab_fade');
+            item.classList.remove('betting-tab_show', 'fade-in-right');
         });
 
         tabsButton.forEach(item => {
@@ -103,7 +106,7 @@ const tabsButtonsWrapper = document.querySelector('.betting-tabs__buttons'),
 	}
 
 	function showTabContent(i) {
-        tabsContent[i].classList.add('betting-tab_show', 'betting-tab_fade');
+        tabsContent[i].classList.add('betting-tab_show', 'fade-in-right');
         tabsContent[i].classList.remove('betting-tab_hide');
         tabsButton[i].classList.add('betting-tabs__button_active');
     }
@@ -122,10 +125,13 @@ const sliderWrapper = document.querySelector('.js-news-slider__wrapper'),
       nextBtn = document.querySelector('.js-news-slider__next'),
       prevBtn = document.querySelector('.js-news-slider__prev');
 
-let position = 0;
+let position = 0,
+    wrapperWidth = document.querySelector('.js-news-slider__wrapper').offsetWidth;
 
-function initSlider(x) {
-  if (x.matches) {
+console.log(`wrapperWidth: ${wrapperWidth}`);
+
+function initSlider(mediaRule) {
+  if (mediaRule.matches) {
     width = 270;
 
     touchZone.forEach(slide => {
@@ -135,7 +141,7 @@ function initSlider(x) {
       slide.addEventListener('touchmove', handleTouchMove, {passive: true});
     });
   } else {
-    width = 320;
+    width = 330;
 
     nextBtn.addEventListener('click', () => {
       moveToNextSlide();
@@ -147,26 +153,28 @@ function initSlider(x) {
   }
 }
 
-initSlider(x);
+initSlider(mobileMedia);
 
 
 function moveToNextSlide() {
-  if (position == (+width * (slides.length - 1))) {
-        position = 0;
-    } else {
-        position += +width;
-    }
+
+    if (Math.abs(position) > (width * 2) - 20) {
+      position = 0;
+  } else {
+      position += +width;
+  }
 
 
     sliderWrapper.style.transform = `translateX(-${position}px)`;
 }
 
 function moveToPrevSlide() {
-  if (position == 0) {
-        position = +width * (slides.length - 1);
-    } else {
-        position -= +width;
-    }
+
+    if (position == 0) {
+      position = width * 2;
+  } else {
+      position -= +width;
+  }
 
     sliderWrapper.style.transform = `translateX(-${position}px)`;
 }
@@ -222,7 +230,10 @@ let anotherForecastWrapper = document.querySelector('.js-another-forecasts__wrap
     bettingPrematchLoadMoreBtn = document.querySelector('.js-betting__tab-prematch-load-more'),
     bettingWrapperLive = document.querySelector('.js-betting__wrapper-live'),
     bettingItemsLive = bettingWrapperLive.querySelectorAll('.js-betting__tab-live'),
-    bettingLiveLoadMoreBtn = document.querySelector('.js-betting__tab-live-load-more');
+    bettingLiveLoadMoreBtn = document.querySelector('.js-betting__tab-live-load-more'),
+    menuWrapper = document.querySelector('.js-menu__wrapper'),
+    menuItems = menuWrapper.querySelectorAll('.js-menu__item'),
+    menuLoadMoreBtn = document.querySelector('.js-menu__load-more');
 
 let slideToShow = 3;
 let anotherForecasts = 3,
@@ -230,6 +241,35 @@ let anotherForecasts = 3,
     bettingPrematch = 1,
     bettingLive = 1;
 
+    function initDesktopMenu(mediaRule) {
+      if (mediaRule.matches) {
+        hideContent(menuItems, 2);
+
+        menuLoadMoreBtn.addEventListener('click', () => {
+
+          if (menuLoadMoreBtn.classList.contains('js-menu__mark')) {
+            hideContent(menuItems, 2);
+            menuLoadMoreBtn.classList.toggle('js-menu__mark');
+            for(let i = 2; i < menuItems.length; i++){
+
+              menuItems[i].classList.toggle('fade-in-up');
+            }
+            menuLoadMoreBtn.innerText = 'еще...';
+          } else {
+            for(let i = 2; i < menuItems.length; i++){
+              menuItems[i].style.display = '';
+
+              menuItems[i].classList.toggle('fade-in-up');
+            }
+
+            menuLoadMoreBtn.classList.toggle('js-menu__mark');
+            menuLoadMoreBtn.innerText = 'скрыть';
+          }
+        });
+      }
+    }
+    
+    initDesktopMenu(desktopMedia);
 
       anotherForecastLoadMoreBtn.addEventListener('click', () => {
 

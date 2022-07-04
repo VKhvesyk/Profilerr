@@ -21,6 +21,7 @@
             border: 2px solid $color-black;
             border-radius: 22px;
             background-color: $color-white;
+            cursor: pointer;
             &_active {
                 color: $color-white;
                 background-color: $color-black;
@@ -116,9 +117,5 @@
         &_hide {
             display: none;
         }
-        &_fade {
-            animation-name: fade;
-            animation-duration: 0.8s;
-          }
     }
 }

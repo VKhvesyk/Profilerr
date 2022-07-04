@@ -58,6 +58,9 @@
                     object-fit: contain;
                 }
             }
+            &-desktop {
+                display: none;
+            }
         }
     }
     &-info {

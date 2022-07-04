@@ -1,4 +1,4 @@
-@keyframes fade {
+@keyframes fade-in-right {
     from {
       opacity: 0;
       transform: translate3d(100%, 0, 0);
@@ -40,5 +40,10 @@
 
 .fade-out-down {
   animation-name: fade-out-down;
+  animation-duration: 0.8s;
+}
+
+.fade-in-right {
+  animation-name: fade-in-right;
   animation-duration: 0.8s;
 }

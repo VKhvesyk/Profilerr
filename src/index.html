@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preload" href="fonts/Formular-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Formular-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Formular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Formular-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Formular-Medium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Formular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Formular-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Formular-Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Formular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -26,41 +34,39 @@
                     </picture>
                 </a>
 
-                <div class="header__overlay js-menu__overlay"></div>
-
                 <nav class="header-menu__wrapper js-menu">
-                    <ul class="header-menu__main">
-                        <li class="header-menu__item">
+                    <ul class="header-menu__main js-menu__wrapper">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">Ставки на киберспорт</a>
                         </li>
-                        <li class="header-menu__item">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">Игры</a>
                         </li>
-                        <li class="header-menu__item">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">Турниры</a>
                         </li>
-                        <li class="header-menu__item">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">КОМАНДЫ</a>
                         </li>
-                        <li class="header-menu__item">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">Игроки</a>
                         </li>
-                        <li class="header-menu__item">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">Новости</a>
                         </li>
-                        <li class="header-menu__item">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">Новости</a>
                         </li>
-                        <li class="header-menu__item">
+                        <li class="header-menu__item js-menu__item">
                             <a href="#" class="header-menu__link">Новости</a>
+                        </li>
+                        <li class="header-menu__more js-menu__load-more">
+                            еще...
                         </li>
                     </ul>
                     <ul class="header-menu__sub">
 
                     </ul>
-                    <div class="header-menu__more">
-                        <p>еще...</p>
-                    </div>
                 </nav>
 
                 <div class="header-search">
@@ -97,28 +103,28 @@
                         <source srcset="icons/left-arrow.svg" type="image/svg+xml">
                         <img src="icons/left-arrow.svg" alt="arrow icon">
                     </picture>
-                    <a href="">Home</a>
+                    <a href="#">Home</a>
                 </li>
                 <li class="forecast-crumbs__item">
                     <picture>
                         <source srcset="icons/left-arrow.svg" type="image/svg+xml">
                         <img src="icons/left-arrow.svg" alt="arrow icon">
                     </picture>
-                    <a href="">Прогнозы на киберспорт</a>
+                    <a href="#">Прогнозы на киберспорт</a>
                 </li>
                 <li class="forecast-crumbs__item">
                     <picture>
                         <source srcset="icons/left-arrow.svg" type="image/svg+xml">
                         <img src="icons/left-arrow.svg" alt="arrow icon">
                     </picture>
-                    <a href="">Прогнозы на матчи CS:GO</a>
+                    <a href="#">Прогнозы на матчи CS:GO</a>
                 </li>
                 <li class="forecast-crumbs__item">
                     <picture>
                         <source srcset="icons/left-arrow.svg" type="image/svg+xml">
                         <img src="icons/left-arrow.svg" alt="arrow icon">
                     </picture>
-                    <span>Прогноз матча Heroic против Natus Vincere 27 ноября</span>
+                    <a href="#">Прогноз матча Heroic против Natus Vincere 27 ноября</a>
                 </li>
             </ul>
 
@@ -137,12 +143,29 @@
                             <img src="icons/share.svg" alt="Share">
                         </picture>
                     </div>
+
+                    <div class="forecast-header__share-desktop">
+                        <a href="#" class="forecast-header__share-desktop-fb">
+                            <picture>
+                                <source srcset="icons/social/facebook.svg" type="image/svg+xml">
+                                <img src="icons/social/facebook.svg" alt="Facebook icon">
+                            </picture>
+                            <p>Share</p>
+                        </a>
+                        <a href="#" class="forecast-header__share-desktop-twitter">
+                            <picture>
+                                <source srcset="icons/social/twitter.svg" type="image/svg+xml">
+                                <img src="icons/social/twitter.svg" alt="Facebook icon">
+                            </picture>
+                            <p>Tweet</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="divider divider_short"></div>
             </div>
 
             <div class="forecast__wrapper">
-                <div class="forecast-info">
+                <article class="forecast-info">
 
                     <div class="forecast-info__header">
                         <div class="title title_fs_18 forecast-info__title">
@@ -161,7 +184,7 @@
                                     <img src="icons/teams/small/g2.png" alt="G2 team">
                                 </picture>
                             </div>
-                            <h3 class="forecast-info__team-name">G2</h3>
+                            <div class="forecast-info__team-name">G2</div>
                             <div class="forecast-info__team-country">
                                 Denmark
                             </div>
@@ -182,7 +205,7 @@
                             </div>
     
                             <div class="forecast-info__winner">
-                                <h3 class="forecast-info__result">NaVi победили</h3>
+                                <div class="forecast-info__result">NaVi победили</div>
                                 <div class="forecast-info__rate-ratio">
                                     <span></span>
                                     <span></span>
@@ -201,7 +224,7 @@
                                     <img src="icons/teams/small/navi.png" alt="NAVI team">
                                 </picture>
                             </div>
-                            <h3 class="forecast-info__team-name">NaVi</h3>
+                            <div class="forecast-info__team-name">NaVi</div>
                             <div class="forecast-info__team-country">
                                 Ukraine
                             </div>
@@ -215,8 +238,8 @@
                             <div class="forecast-info__team-coefficient">1.35</div>
                         </div>
                     </div>
-                </div>
-                <div class="forecast-partners">
+                </article>
+                <article class="forecast-partners">
                     <div class="title title_fs_24 forecast-partners__title">
                         Бонусы от букмекеров
                     </div>
@@ -291,7 +314,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </article>
             </div>
 
             <ul class="forecast-event">
@@ -340,10 +363,10 @@
             <div class="betting-tabs">
                     <div class="betting-tabs__wrapper js-betting__wrapper-prematch">
         
-                        <div class="betting-tab js-betting__tab-prematch">
+                        <article class="betting-tab js-betting__tab-prematch">
                             <div class="betting-tab__title">
-                                <h3>Heroic</h3>
-                                <h3>Natus Vincere</h3>
+                                <h4>Heroic</h4>
+                                <h4>Natus Vincere</h4>
                             </div>
                             
                             <div class="betting-tab__items">
@@ -477,12 +500,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="betting-tab js-betting__tab-prematch">
+                        <article class="betting-tab js-betting__tab-prematch">
                             <div class="betting-tab__title">
-                                <h3>Heroic</h3>
-                                <h3>Natus Vincere</h3>
+                                <h4>Heroic</h4>
+                                <h4>Natus Vincere</h4>
                             </div>
                             
                             <div class="betting-tab__items">
@@ -614,16 +637,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                         <button class="button button_load_more js-betting__tab-prematch-load-more">ПОКАЗАТЬ ЕЩЕ</button>
                     </div>
     
                     <div class="betting-tabs__wrapper js-betting__wrapper-live">
                     
-                        <div class="betting-tab js-betting__tab-live">
+                        <article class="betting-tab js-betting__tab-live">
                             <div class="betting-tab__title">
-                                <h3>Heroic</h3>
-                                <h3>Natus Vincere</h3>
+                                <h4>Heroic</h4>
+                                <h4>Natus Vincere</h4>
                             </div>
                             
                             <div class="betting-tab__items">
@@ -755,12 +778,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="betting-tab js-betting__tab-live">
+                        <article class="betting-tab js-betting__tab-live">
                             <div class="betting-tab__title">
-                                <h3>Heroic</h3>
-                                <h3>Natus Vincere</h3>
+                                <h4>Heroic</h4>
+                                <h4>Natus Vincere</h4>
                             </div>
                             
                             <div class="betting-tab__items">
@@ -892,12 +915,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="betting-tab js-betting__tab-live">
+                        <article class="betting-tab js-betting__tab-live">
                             <div class="betting-tab__title">
-                                <h3>Heroic</h3>
-                                <h3>Natus Vincere</h3>
+                                <h4>Heroic</h4>
+                                <h4>Natus Vincere</h4>
                             </div>
                             
                             <div class="betting-tab__items">
@@ -1029,7 +1052,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                         <button class="button button_load_more js-betting__tab-live-load-more">ПОКАЗАТЬ ЕЩЕ</button>
                     </div>
             </div>
@@ -1043,7 +1066,7 @@
                 Краткий анализ
             </h3>
             <div class="analysis__wrapper">
-                <div class="analysis-team">
+                <article class="analysis-team">
                     <div class="analysis-team__name">
                         <div class="analysis-team__logo">
                             <picture>
@@ -1086,9 +1109,9 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </article>
     
-                <div class="analysis-team">
+                <article class="analysis-team">
                     <div class="analysis-team__name">
                         <div class="analysis-team__logo">
                             <picture>
@@ -1148,7 +1171,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </div>
 
         </div>
@@ -1161,7 +1184,7 @@
                     Лицом к лицу
                 </div>
 
-                <div class="face-to-face__team">
+                <article class="face-to-face__team">
                     <div class="face-to-face__team-header">
                         <div class="face-to-face__team-name">
                             <div class="face-to-face__team-logo">
@@ -1185,7 +1208,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/niko.png">
+                                    <source srcset="icons/players-photo/niko.webp" type="image/webp">
                                     <img src="icons/players-photo/niko.png" alt="Niko photo">
                                 </picture>
                             </div>
@@ -1208,7 +1231,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/hunter.png">
+                                    <source srcset="icons/players-photo/hunter.webp" type="image/webp">
                                     <img src="icons/players-photo/hunter.png" alt="huNter- photo">
                                 </picture>
                             </div>
@@ -1231,7 +1254,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/nexa.png">
+                                    <source srcset="icons/players-photo/nexa.webp" type="image/webp">
                                     <img src="icons/players-photo/nexa.png" alt="nexa photo">
                                 </picture>
                             </div>
@@ -1254,7 +1277,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/amanek.png">
+                                    <source srcset="icons/players-photo/amanek.webp" type="image/webp">
                                     <img src="icons/players-photo/amanek.png" alt="AmaNEk photo">
                                 </picture>
                             </div>
@@ -1277,7 +1300,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/jackz.png">
+                                    <source srcset="icons/players-photo/jackz.webp" type="image/webp">
                                     <img src="icons/players-photo/jackz.png" alt="AmaNEk photo">
                                 </picture>
                             </div>
@@ -1358,9 +1381,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
     
-                <div class="face-to-face__team">
+                <article class="face-to-face__team">
                     <div class="face-to-face__team-header">
                         <div class="face-to-face__team-name">
                             <div class="face-to-face__team-logo">
@@ -1384,7 +1407,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/s1mple.png">
+                                    <source srcset="icons/players-photo/s1mple.webp" type="image/webp">
                                     <img src="icons/players-photo/s1mple.png" alt="s1mple photo">
                                 </picture>
                             </div>
@@ -1407,7 +1430,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/boombl4.png">
+                                    <source srcset="icons/players-photo/boombl4.webp" type="image/webp">
                                     <img src="icons/players-photo/boombl4.png" alt="Boombl4 photo">
                                 </picture>
                             </div>
@@ -1430,7 +1453,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/b1t.png">
+                                    <source srcset="icons/players-photo/b1t.webp" type="image/webp">
                                     <img src="icons/players-photo/b1t.png" alt="B1T photo">
                                 </picture>
                             </div>
@@ -1453,7 +1476,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/perfecto.png">
+                                    <source srcset="icons/players-photo/perfecto.webp" type="image/webp">
                                     <img src="icons/players-photo//perfecto.png" alt="Perfecto photo">
                                 </picture>
                             </div>
@@ -1476,7 +1499,7 @@
                         <li class="face-to-face__player">
                             <div class="face-to-face__player-photo">
                                 <picture>
-                                    <source srcset="icons/players-photo/electronic.png">
+                                    <source srcset="icons/players-photo/electronic.webp" type="image/webp">
                                     <img src="icons/players-photo/electronic.png" alt="electronic photo">
                                 </picture>
                             </div>
@@ -1557,7 +1580,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1570,7 +1593,7 @@
             </div>
             <div class="handicap__wrapper">
 
-                <div class="handicap__team">
+                <article class="handicap__team">
                     <div class="handicap__team-header">
                         <div class="handicap__team-name">
                             <div class="handicap__team-logo">
@@ -1712,9 +1735,9 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="handicap__team">
+                <article class="handicap__team">
                     <div class="handicap__team-header">
                         <div class="handicap__team-name">
                             <div class="handicap__team-logo">
@@ -1856,9 +1879,9 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="handicap__summary">
+                <article class="handicap__summary">
                     <div class="handicap__summary-header">
                         <div class="handicap__summary-header-map">
                             Map
@@ -2057,17 +2080,17 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </article>
             </div>
 
-            <div class="handicap__about">
-                <div class="title handicap__about-title">
+            <article class="handicap__about">
+                <h3 class="title handicap__about-title">
                     Об этом матче
-                </div>
+                </h3>
                 <div class="handicap__about-text">
                     <span>Heroic</span> сыграют против <span>Natus Vincere</span> в <span>BLAST Premier Fall Final 2021</span> <time datetime="2021-11-25 16:00">25 ноября 2021 в 16:00</time>. Здесь вы найдете обзор составов команд и данные по матчу. Также вы найдете обзоры коэффициентов, включая коэффициенты от букмекеров, по которым Natus Vincere являются фаворитом в этом матче.
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -2565,7 +2588,7 @@
 
                     <div class="news-card js-news-slider__slide">
                         <a href="#" class="news-card__lable news-card__lable_bg_black">
-                            DOTA2 FST
+                            DOTA2
                         </a>
                         <div class="news-card__title">
                             <a href="#" class="title title_fs_20">
@@ -2626,7 +2649,7 @@
     
                     <div class="news-card js-news-slider__slide">
                         <a href="#" class="news-card__lable news-card__lable_bg_black">
-                            CS:GO LST
+                            CS:GO
                         </a>
                         <div class="news-card__title">
                             <a href="#" class="title title_fs_20">
@@ -2657,10 +2680,10 @@
         </div>
     </section>
 
-    <section class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <nav class="footer__menu">
+                <nav` class="footer__menu">
                     <a href="" class="footer__menu-item">
                         Cтавки
                     </a>
@@ -2674,7 +2697,7 @@
                         КОманды
                     </a>
                 </nav>
-                <div class="footer__links">
+                <nav class="footer__links">
                     <a href="" class="footer__links-link">
                         Обзоры
                     </a>
@@ -2690,7 +2713,7 @@
                     <a href="" class="footer__links-link">
                         Прогнозы
                     </a>
-                </div>
+                </nav>
                 <div class="footer__rights">
                     All rights reserved. The project of Eska8 LTD (company number 12050114), United Kingdom. Use of materials is permitted by providing a link (for online publications – hyperlink) to Signs FM.
                 </div>
@@ -2721,7 +2744,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
+
+    <div class="overlay js-menu__overlay"></div>
 
     <script src="js/script.js"></script>
 </body>

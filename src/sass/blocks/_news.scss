@@ -2,7 +2,6 @@
     margin-top: 40px;
     padding: 20px 0px;
     background-color: $color-black;
-    // overflow: hidden;
     &__header {
         display: flex;
         justify-content: space-between;
@@ -18,10 +17,20 @@
                 transform: rotate(180deg);
             }
         }
+        &__prev, &__next {
+            transition: 0.3s all;
+            &:active {
+                transform: scale(0.9);
+            }
+        }
         &__wrapper {
-            display: flex;
             transition: 0.7s all;
-            width: fit-content;
+            display: grid;
+            grid-template-columns: repeat(3, 250px);
+            grid-template-rows: auto;
+            grid-auto-flow: row;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
         }
     }
     &-card {
